@@ -26,6 +26,6 @@ class Youth extends CI_Controller
 			["name" => "Onduso", "age" => 25]
 		];
 
-		return json_encode($result);
+		echo json_encode($result);
 	}
 }
