@@ -19,12 +19,16 @@ class Youth extends CI_Controller
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function profile()
+	public function profile($id = '')
 	{
 		$result = [
 			["name" => "Karisa", "age" => 30],
 			["name" => "Onduso", "age" => 25]
 		];
+
+		if ($id != "") {
+			$result = $result[$id];
+		}
 
 		echo json_encode($result);
 	}
